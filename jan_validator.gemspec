@@ -1,12 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'active_model'
 require 'jan_validator/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "jan_validator"
-  spec.version       = JanValidator::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["OSA Shunsuke"]
   spec.email         = ["hhelibebcnofnenamg@gmail.com"]
   spec.summary       = %q{JAN validator for Rails}
