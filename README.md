@@ -2,23 +2,35 @@
 
 [![Build Status](https://travis-ci.org/s-osa/jan_validator.svg?branch=master)](https://travis-ci.org/s-osa/jan_validator)
 
+Jan validator for Rails.
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'jan_validator'
+```ruby
+gem 'jan_validator'
+```
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install jan_validator
+```ruby
+$ gem install jan_validator
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Product < ActiveRecord::Base
+  validates :jan_code, jan: true
+end
+```
 
 ## Contributing
 
