@@ -1,0 +1,5 @@
+en:
+  errors:
+    messages:
+      invalid_length: "#{jan_code} must be 8 or 13 digits"
+      invalid_check_digit: "#{jan_code} has invalid check-digit"
