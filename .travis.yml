@@ -1,4 +1,7 @@
 language: ruby
+env:
+  - ACTIVE_MODEL_VERSION=3.2
+  - ACTIVE_MODEL_VERSION=4.0
 rvm:
   - 2.1.2
   - 2.0.0

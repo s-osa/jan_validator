@@ -1,3 +1,3 @@
-class JanValidator < ActiveModel::EachValidator
+module JanValidator
   VERSION = "0.0.1"
 end
