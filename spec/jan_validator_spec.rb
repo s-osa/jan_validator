@@ -4,6 +4,18 @@ class TestProduct < TestModel
   validates :jan_code, jan: true
 end
 
+class AllowNilTestProduct < TestModel
+  validates :jan_code,
+    allow_nil: true,
+    jan: true
+end
+
+class AllowBlankTestProduct < TestModel
+  validates :jan_code,
+    allow_blank: true,
+    jan: true
+end
+
 describe JanValidator do
   describe "validation" do
     context "valid codes" do
@@ -12,6 +24,14 @@ describe JanValidator do
           actual = TestProduct.new(jan_code: code)
           expect(actual).to be_valid
         end
+      end
+      it "Model with 'allow_nil' should be valid" do
+        actual = AllowNilTestProduct.new(jan_code: nil)
+        expect(actual).to be_valid
+      end
+      it "Model with 'allow_blank' should be valid" do
+        actual = AllowBlankTestProduct.new(jan_code: "")
+        expect(actual).to be_valid
       end
     end
 
