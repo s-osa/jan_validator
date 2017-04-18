@@ -1,0 +1,5 @@
+en:
+  errors:
+    messages:
+      invalid_length: "must be 8 or 13 digits"
+      invalid_check_digit: "has invalid check-digit"

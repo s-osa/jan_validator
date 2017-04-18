@@ -24,4 +24,19 @@ describe JanValidator do
       end
     end
   end
+
+  describe "error messages" do
+    context "when the message is defined" do
+      it "123 should add the customized message" do
+        actual = TestProduct.new(jan_code: 123)
+        expect(actual.valid?).to be(false)
+        expect(actual.errors[:jan_code].first).to include("must be 8 or 13 digits")
+      end
+      it "4901277241120 should add the customized message" do
+        actual = TestProduct.new(jan_code: 4901277241120)
+        expect(actual.valid?).to be(false)
+        expect(actual.errors[:jan_code].first).to include("has invalid check-digit")
+      end
+    end
+  end
 end

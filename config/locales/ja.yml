@@ -1,0 +1,5 @@
+ja:
+  errors:
+    messages:
+      invalid_length: "は8桁か13桁で入力してください。"
+      invalid_check_digit: "のチェックデジットが不正です。"
