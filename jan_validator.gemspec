@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "jan_validator"
-  spec.version       = "0.0.1"
+  spec.version       = "0.1.0"
   spec.authors       = ["OSA Shunsuke"]
   spec.email         = ["hhelibebcnofnenamg@gmail.com"]
   spec.summary       = %q{JAN validator for Rails}
-  spec.description   = %q{JAN validator for Rails}
+  spec.description   = %q{JAN validator for Rails (ActiveModel)}
   spec.homepage      = "https://github.com/s-osa/jan_validator"
   spec.license       = "MIT"
 
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "activemodel"
-  spec.add_runtime_dependency "jan", ">= 0.0.3"
+  spec.add_runtime_dependency "jan", ">= 0.0.3", "< 0.2.0"
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
